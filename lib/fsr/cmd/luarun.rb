@@ -2,7 +2,7 @@ require "fsr/app"
 module FSR
   module Cmd
     class Luarun < Command
-      attr_reader :script, :arguments #arguments is just a string
+      attr_accessor :script, :arguments #arguments is just a string
 
       def initialize(fs_socket = nil)
         @fs_socket = fs_socket # FSR::CommandSocket obj
